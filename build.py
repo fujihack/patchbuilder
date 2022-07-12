@@ -1,5 +1,5 @@
 # make model=xf1 inject.bin
-import os, json
+import os, json, re
 
 models = [
     
@@ -15,8 +15,17 @@ for m in model:
     data = {
         "name": name,
         "main": "",
-        "jump": ""
+        "jump": "",
+        "code": ""
     }
+
+    # Figure out better solution later?
+    f = open("fujihack/model/" + name + ".h", "r")
+    matches = data["code"] = re.search(r"#define MODEL_CODE \"([0-9]+)\"", f.read())
+    if matches == None:
+        data["code"] = ""
+    else:
+        data["code"] = matches.group(1)
 
     os.system("cd fujihack; make clean")
 
@@ -34,3 +43,4 @@ for m in model:
 
     f = open("data.js", "w")
     f.write(json.dumps(models))
+    f.close()
