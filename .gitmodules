@@ -1,0 +1,3 @@
+[submodule "fujihack"]
+	path = fujihack
+	url = https://github.com/fujihack/fujihack
