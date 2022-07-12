@@ -1,0 +1,2 @@
+// precompiled binary links
+[{"name": "xt10", "main": "", "jump": ""}, {"name": "z3", "main": "", "jump": ""}, {"name": "hs20exr", "main": "", "jump": ""}, {"name": "stub", "main": "", "jump": ""}, {"name": "xf1", "main": "main-xf1.bin", "jump": "main-xf1.bin"}, {"name": "xt4", "main": "", "jump": ""}]
