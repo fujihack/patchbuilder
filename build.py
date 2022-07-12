@@ -33,5 +33,4 @@ for m in model:
     models.append(data)
 
     f = open("data.js", "w")
-    f.write("// precompiled binary links\n")
     f.write(json.dumps(models))
