@@ -21,6 +21,9 @@ jobs:
 
       - name: Checkout submodules
         run: git submodule update --init --recursive
+      
+      - name: Update fujihack
+        run: cdf fujihack; git pull origin master
 
       - name: Install deps
         run: sudo apt install gcc make gcc-arm-none-eabi python3
