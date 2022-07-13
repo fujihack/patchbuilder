@@ -9,7 +9,7 @@ model = os.listdir("fujihack/model")
 print("Attempt compile:", model)
 for m in model:
     name = m.split(".")[0]
-    if name == "template":
+    if name == "template" || name == "stub":
         continue
 
     data = {
